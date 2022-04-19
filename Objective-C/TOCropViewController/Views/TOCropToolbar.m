@@ -117,6 +117,7 @@
     _clampButton = [UIButton buttonWithType:UIButtonTypeSystem];
     _clampButton.contentMode = UIViewContentModeCenter;
     _clampButton.tintColor = [UIColor whiteColor];
+    [_clampButton setAccessibilityLabel: NSLocalizedStringFromTableInBundle(@"Clamp Image", @"TOCropViewControllerLocalizable", resourceBundle, nil)];
     [_clampButton setImage:[TOCropToolbar clampImage] forState:UIControlStateNormal];
     [_clampButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_clampButton];
@@ -124,6 +125,7 @@
     _rotateCounterclockwiseButton = [UIButton buttonWithType:UIButtonTypeSystem];
     _rotateCounterclockwiseButton.contentMode = UIViewContentModeCenter;
     _rotateCounterclockwiseButton.tintColor = [UIColor whiteColor];
+    [_rotateCounterclockwiseButton setAccessibilityLabel: NSLocalizedStringFromTableInBundle(@"Rotate Image Counter Clockwise", @"TOCropViewControllerLocalizable", resourceBundle, nil)];
     [_rotateCounterclockwiseButton setImage:[TOCropToolbar rotateCCWImage] forState:UIControlStateNormal];
     [_rotateCounterclockwiseButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_rotateCounterclockwiseButton];
@@ -131,6 +133,7 @@
     _rotateClockwiseButton = [UIButton buttonWithType:UIButtonTypeSystem];
     _rotateClockwiseButton.contentMode = UIViewContentModeCenter;
     _rotateClockwiseButton.tintColor = [UIColor whiteColor];
+    [_rotateClockwiseButton setAccessibilityLabel: NSLocalizedStringFromTableInBundle(@"Rotate Image Clockwise", @"TOCropViewControllerLocalizable", resourceBundle, nil)];
     [_rotateClockwiseButton setImage:[TOCropToolbar rotateCWImage] forState:UIControlStateNormal];
     [_rotateClockwiseButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_rotateClockwiseButton];
@@ -139,6 +142,7 @@
     _resetButton.contentMode = UIViewContentModeCenter;
     _resetButton.tintColor = [UIColor whiteColor];
     _resetButton.enabled = NO;
+    [_resetButton setAccessibilityLabel: NSLocalizedStringFromTableInBundle(@"Reset Image", @"TOCropViewControllerLocalizable", resourceBundle, nil)];
     [_resetButton setImage:[TOCropToolbar resetImage] forState:UIControlStateNormal];
     [_resetButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
     _resetButton.accessibilityLabel = NSLocalizedStringFromTableInBundle(@"Reset",
